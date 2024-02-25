@@ -63,6 +63,8 @@ model Movie {
   description         String
   videoUrl            String
   thumbnailUrl        String
-  genre               String
+  genre               String // Type of video comedy, action, ...
   duration            String
+  videoExtension      String? // video extension like video/mp4 or application/vnd.apple.mpegurl (hls-m3u8)
+  nation              String? // video nation like korea, vietnam, china, ...
 }

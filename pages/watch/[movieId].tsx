@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useMemo } from "react";
 import useMovie from "@/hooks/useMovie";
 import { useRouter } from "next/router";
 import { AiOutlineArrowLeft } from "react-icons/ai";
+import VideoPlayer from "@/components/VideoPlayer";
 
 const Watch = () => {
   const router = useRouter();
@@ -37,12 +38,13 @@ const Watch = () => {
           {data?.title}
         </p>
       </nav>
-      <video
+      {/* <video
         className="h-full w-full"
         src={data?.videoUrl}
         autoPlay
         controls
-      ></video>
+      ></video> */}
+      {data && <VideoPlayer data={data} className={"w-full h-full"} />}
     </div>
   );
 };

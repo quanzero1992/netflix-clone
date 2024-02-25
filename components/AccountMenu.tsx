@@ -17,16 +17,22 @@ const AccountMenu: React.FC<AccountMenuProps> = ({ visible }) => {
             src={data?.image || "/images/default-blue.png"}
             alt=""
           />
-          <p className="text-white text-sm group-hover/item:underline">
+          <p className="text-white text-end text-sm group-hover/item:underline">
             {data?.name}
           </p>
+        </div>
+        <div className="px-3 text-center text-white text-sm hover:underline">
+          My list
+        </div>
+        <div className="px-3 text-center text-white text-sm hover:underline">
+          History
         </div>
         <hr className="bg-gray-600 border-0 h-px my-4" />
         <div
           onClick={() => signOut()}
           className="px-3 text-center text-white text-sm hover:underline"
         >
-          Sign out of Netflix
+          Sign out
         </div>
       </div>
     </div>
