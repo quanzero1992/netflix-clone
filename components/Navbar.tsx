@@ -49,7 +49,7 @@ const Navbar = () => {
         ${showBackground ? "bg-zinc-900 bg-opacity-90" : ""}
        `}
       >
-        <img className="h-4 lg:h-7" src="/images/logo.png" alt="logo" />
+        <img className="h-6 lg:h-10" src="/logo.png" alt="logo" />
         <div
           className="
             flex-row
@@ -59,10 +59,11 @@ const Navbar = () => {
             lg:flex
         "
         >
-          <NavbarItem label="Home" />
-          <NavbarItem label="Series" />
-          <NavbarItem label="Films" />
-          <NavbarItem label="New & Popular" />
+          <NavbarItem label="Phim lẻ" />
+          <NavbarItem label="Phim bộ" />
+          <NavbarItem label="Xu hướng" />
+          <NavbarItem label="Thể loại" />
+          <NavbarItem label="Quốc gia" />
         </div>
         <div
           onClick={toogleMobileMenu}

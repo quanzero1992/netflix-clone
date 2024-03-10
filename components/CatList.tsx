@@ -1,14 +1,14 @@
-import React from "react";
 import { isEmpty } from "lodash";
-import MovieCard from "./MovieCard";
+import React from "react";
+import CatCard from "./CatCard";
 
-interface MovieListProps {
+interface CatListProps {
   data: Record<string, any>[];
   title: string;
-  desc: string;
+  desc: string | "";
 }
 
-const MovieList: React.FC<MovieListProps> = ({ data, title, desc }) => {
+const CatList: React.FC<CatListProps> = ({ data, title, desc }) => {
   if (isEmpty(data)) {
     return null;
   }
@@ -24,7 +24,7 @@ const MovieList: React.FC<MovieListProps> = ({ data, title, desc }) => {
         </p>
         <div className="grid grid-cols-4 gap-2">
           {data.map((movie) => (
-            <MovieCard key={movie.id} data={movie} />
+            <CatCard key={movie.id} data={movie} />
           ))}
         </div>
       </div>
@@ -32,4 +32,4 @@ const MovieList: React.FC<MovieListProps> = ({ data, title, desc }) => {
   );
 };
 
-export default MovieList;
+export default CatList;

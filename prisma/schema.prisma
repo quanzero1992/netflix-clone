@@ -46,6 +46,7 @@ model User {
   image         String?
   accounts      Account[]
   sessions      Session[]
+  favoriteIds   String[]
 }
 
 model VerificationToken {
@@ -58,13 +59,15 @@ model VerificationToken {
 
 model Movie {
   // id String @id @default(auto()) @map("_id") @db.ObjectId
-  id                  String  @id @default(cuid())
+  id                  String  @id @default(cuid()) 
   title               String
-  description         String
+  description         String?
   videoUrl            String
   thumbnailUrl        String
-  genre               String // Type of video comedy, action, ...
-  duration            String
+  genre               String? // Type of video comedy, action, ...
+  duration            String?
   videoExtension      String? // video extension like video/mp4 or application/vnd.apple.mpegurl (hls-m3u8)
   nation              String? // video nation like korea, vietnam, china, ...
+  publishYear         String? 
+  rating              String?
 }
