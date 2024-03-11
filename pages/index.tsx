@@ -9,6 +9,7 @@ import useFavorites from "@/hooks/useFavorites";
 import InfoModal from "@/components/InfoModal";
 import useInfoModal from "@/hooks/useInforModal";
 import CatList from "@/components/CatList";
+import Footer from "@/components/Footer";
 
 export async function getServerSideProps(context: NextPageContext) {
   const session = await getSession(context);
@@ -285,6 +286,7 @@ export default function Home() {
           desc="📽️ Tận hưởng vẻ đẹp và sức mạnh của điện ảnh Á Đông với những bộ phim từ Hàn Quốc, Trung Quốc, Nhật Bản và nhiều quốc gia khác! Đắm chìm vào thế giới của Hollywood và các nền điện ảnh phương Tây với những bộ phim từ Mỹ, Anh, Pháp, Ý, Đức và nhiều quốc gia khác!"
         />
       </div>
+      <Footer />
     </>
   );
 }

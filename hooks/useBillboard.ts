@@ -3,7 +3,7 @@ import useSWR from "swr";
 import fetcher from "@/lib/fetcher";
 
 const useBillboard = () => {
-  const { data, error, isLoading } = useSWR("/api/random", fetcher, {
+  const { data, error, isLoading } = useSWR("/api/slider", fetcher, {
     revalidateIfStale: false,
     revalidateOnFocus: false,
     revalidateOnReconnect: false,

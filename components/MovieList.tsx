@@ -17,7 +17,10 @@ const MovieList: React.FC<MovieListProps> = ({ data, title, desc }) => {
     <div className="px-4 md:px-12 mt-4 space-y-8">
       <div className="">
         <p className="mt-10 mb-4 text-white text-md md:text-xl lg:text-2xl font-semibold">
-          {title}
+          {title}{" "}
+          <a href="#" className="text-green-400 font-semibold text-[12px] ml-3">
+            Xem thêm
+          </a>
         </p>
         <p className="mb-4 mt-2 text-gray-400 text-sm md:text-sm lg:text-md font-semibold md:w-[80%] lg:w-[50%] ">
           {desc}
